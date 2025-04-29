@@ -12,15 +12,14 @@ WORKDIR /src
 # Copy all .csproj files
 COPY ../stock-core/stock-core.csproj ./stock-core/
 COPY ../stock-infra/stock-infra.csproj ./stock-infra/
-COPY ../stock-api/stock-api.csproj ./stock-api/
-
+COPY . stock-api.csproj .
 # Restore all projects
 RUN dotnet restore ./stock-api/stock-api.csproj
 
 # Copy full source code
 COPY ../stock-core/ ./stock-core/
 COPY ../stock-infra/ ./stock-infra/
-COPY ../stock-api/ ./stock-api/
+COPY . .
 
 WORKDIR /src/stock-api
 RUN dotnet build "stock-api.csproj" -c $BUILD_CONFIGURATION -o /app/build
