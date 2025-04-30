@@ -15,7 +15,7 @@ WORKDIR /src
 COPY ["stock-api/stock-api.csproj", "falsestreet-stock-api/"]
 COPY ["stock-core/stock-core.csproj", "falsestreet-stock-api/"]
 COPY ["stock-infra/stock-infra.csproj", "falsestreet-stock-api/"]
-RUN dotnet restore "./stock-api/falsestreet-stock-api.csproj"
+RUN dotnet restore "./stock-api/stock-api.csproj"
 COPY . .
 WORKDIR "/src/falsestreet-stock-api"
 RUN dotnet build "./stock-api.csproj" -c $BUILD_CONFIGURATION -o /app/build
