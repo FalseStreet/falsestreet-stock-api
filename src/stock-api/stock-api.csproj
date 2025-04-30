@@ -7,7 +7,7 @@
     <RootNamespace>stock_api</RootNamespace>
     <UserSecretsId>0f5e0632-06f9-4f02-8bf9-be8032adfb8e</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>.</DockerfileContext>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>

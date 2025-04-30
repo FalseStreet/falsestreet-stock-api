@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "stock-api", "stock-api\stock-api.csproj", "{0ACC1160-DE6B-4C49-9C48-CDCAFDC5DC91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\stock-api", "src\stock-api\stock-api.csproj", "{0ACC1160-DE6B-4C49-9C48-CDCAFDC5DC91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stock-core", "stock-core\stock-core.csproj", "{FA65AB55-1C34-4BB8-BDA1-D2A4565F434B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src\stock-core", "src\stock-core\stock-core.csproj", "{FA65AB55-1C34-4BB8-BDA1-D2A4565F434B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stock-infra", "stock-infra\stock-infra.csproj", "{188A74D8-9080-4716-97C3-709EC4B5185D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src\stock-infra", "src\stock-infra\stock-infra.csproj", "{188A74D8-9080-4716-97C3-709EC4B5185D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
