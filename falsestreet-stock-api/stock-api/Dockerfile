@@ -4,19 +4,20 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 10000
+EXPOSE 8080
+EXPOSE 8081
 
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["src/stock-api/stock-api.csproj", "src/stock-api/"]
-COPY ["src/stock-infra/stock-infra.csproj", "src/stock-infra/"]
-COPY ["src/stock-core/stock-core.csproj", "src/stock-core/"]
-RUN dotnet restore "./src/stock-api/stock-api.csproj"
+COPY ["stock-api/stock-api.csproj", "falsestreet-stock-api/"]
+COPY ["stock-core/stock-core.csproj", "falsestreet-stock-api/"]
+COPY ["stock-infra/stock-infra.csproj", "falsestreet-stock-api/"]
+RUN dotnet restore "./stock-api/falsestreet-stock-api.csproj"
 COPY . .
-WORKDIR "/src/src/stock-api"
+WORKDIR "/src/falsestreet-stock-api"
 RUN dotnet build "./stock-api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
